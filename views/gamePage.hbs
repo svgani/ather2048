@@ -30,44 +30,44 @@
       </tbody>
     </table>
 
-  {{!-- <div class="container">
-    {{#each list}}
-      <div class="row">
-        {{#each this}}
-          <p class="col-sm-3" style="margin-top: 10px;text-transform: uppercase;letter-spacing: 0.05em;">
-            {{this}}
-          </p>
-        {{/each}}
-      </div>
-    {{/each}}
-  </div> --}}
-
-  <div class="container" style="padding: 15px">
-    <div class="row">
-      <div class="col">
-        <form action="/up" method="post">
-          <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>^</button>
-        </form>
-      </div>
-      </div>
-      <div class="row" style="padding: 5px">
-        <div class="col">
-          <form action="/left" method="post">
-            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span><</button>
-          </form>
-        </div>
-        <div class="col">
-          <form action="/down" method="post">
-            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>v</button>
-          </form>
-        </div>
-        <div class="col">
-          <form action="/right" method="post">
-            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>></button>
-          </form>
-        </div>
-    </div>
-  </div>
+    <table style="height: 100px; width: 100px; margin-left: auto; margin-right: auto;" class="text-center">
+      <tbody>
+        <tr>
+          <td> </td>
+          <td>
+            <div class="col">
+              <form action="/up" method="post">
+                <button type="submit" class="btn btn-primary">^</button>
+              </form>
+            </div>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="col">
+              <form action="/left" method="post">
+                <button type="submit" class="btn btn-primary"><</button>
+              </form>
+            </div>
+          </td>
+          <td>
+            <div class="col">
+              <form action="/down" method="post">
+                <button type="submit" class="btn btn-primary">v</button>
+              </form>
+            </div>
+          </td>
+          <td>
+            <div class="col">
+              <form action="/right" method="post">
+                <button type="submit" class="btn btn-primary">></button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+    </table>
     
   </body>
 </html>
