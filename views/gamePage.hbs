@@ -8,43 +8,66 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="logic.js"></script>
-    <script>
-      
-    </script>
+    <link rel="stylesheet" type="text/css" href="game.css"/>
 
   </head>
   <body>
     <h1 style="text-align: center; font-size:60px; color:blue;">2048</h1>
     <h3 style="text-align: center; font-size:40px; color:green;">Score: {{score}}</h3>
-    <table style="height: 300px; width: 300px; margin-left: auto; margin-right: auto;" class="table table-bordered text-center table-striped">
+    <table style="height: 300px; width: 300px; margin-left: auto; margin-right: auto;" class="table table-bordered text-center">
       <tbody>
         {{#each list}}
           <tr>
             {{#each this}}
               {{#if this}}
-                <td style="height: 5px; width: 5px;">{{this}}</td>
+                <td style="height: 5px; width: 5px; text-align: center; font-size:50px; color:orange;">{{this}}</td>
               {{else}}
-                <td style="height: 5px; width: 5px;">  </td>
+                <td style="height: 5px; width: 5px text-align: center; font-size:50px; color:orange;;">&nbsp;</td>
               {{/if}}
             {{/each}}
           </tr>
         {{/each}}
       </tbody>
     </table>
-    <form action="/up" method="post">
-      <input id=submit type="submit" name= "form" value="^" />
-    </form>
-    <br>
-    <form action="/left" method="post">
-      <input id=submit type="submit" name= "form" value="<" />
-    </form>
-    <form action="/down" method="post">
-      <input id=submit type="submit" name= "form" value="v" />
-    </form>
-    <form action="/right" method="post">
-      <input id=submit type="submit" name= "form" value=">" />
-    </form>
+
+  {{!-- <div class="container">
+    {{#each list}}
+      <div class="row">
+        {{#each this}}
+          <p class="col-sm-3" style="margin-top: 10px;text-transform: uppercase;letter-spacing: 0.05em;">
+            {{this}}
+          </p>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div> --}}
+
+  <div class="container" style="padding: 15px">
+    <div class="row">
+      <div class="col">
+        <form action="/up" method="post">
+          <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>^</button>
+        </form>
+      </div>
+      </div>
+      <div class="row" style="padding: 5px">
+        <div class="col">
+          <form action="/left" method="post">
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span><</button>
+          </form>
+        </div>
+        <div class="col">
+          <form action="/down" method="post">
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>v</button>
+          </form>
+        </div>
+        <div class="col">
+          <form action="/right" method="post">
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>></button>
+          </form>
+        </div>
+    </div>
+  </div>
     
   </body>
 </html>

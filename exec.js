@@ -2,8 +2,6 @@ li = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
 score = 0
 flag = [0,0,0,0]
 
-
-
 function rightAdd(){
     for (var i=0;i<4;i++){
         for (var j=2;j>-1;j--){
@@ -76,64 +74,69 @@ function leftAdd(){
 const upCheck = (req,res) => {
   up()
   upAdd()
-  if (flag[0]==0){
-    console.log("up not possible");
-    return
+  if (flag[0]==0)
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
+  else{
+    fillPosition()
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
   }
-  fillPosition()
-  console.log("up done");
-  res.render('gamePage',{
-    list : li,
-    score: score
-  });
 }
 
 const downCheck = (req,res) => {
   down()
   downAdd()
-  if (flag[2]==0){
-    console.log("down not possible");
-    return
+  if (flag[0]==0)
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
+  else{
+    fillPosition()
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
   }
-  fillPosition()
-  console.log("down done");
-  res.render('gamePage',{
-    list : li,
-    score: score
-  });
 }
 
 const rightCheck = (req,res) => {
   right()
   rightAdd()
-  if (flag[3]==0){
-    console.log("right not possible");
-    return
+  if (flag[0]==0)
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
+  else{
+    fillPosition()
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
   }
-  fillPosition()
-  console.log("right done");
-  res.render('gamePage',{
-    list : li,
-    score: score
-  });
 }
 
 const leftCheck = (req,res) => {
-  console.log("in left check");
   left()
-  console.log("after left");
   leftAdd()
-  console.log("after left add");
-  if (flag[1]==0){
-    console.log("left not possible");
-    return
+  if (flag[0]==0)
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
+  else{
+    fillPosition()
+    res.render('gamePage',{
+      list : li,
+      score: score
+    });
   }
-  fillPosition()
-  console.log("left done");
-  res.render('gamePage',{
-    list : li,
-    score: score
-  });
 }
 
 function left(){
@@ -204,23 +207,25 @@ function down() {
   }
 }
 
-function gameOver(){
-  for (var i=0;i<4;i++){
-    for (var j=0;j<4;j++){
-            if (li[i][j] == 0)
-                return 0
-    }
-  }
-  return 1
-}
+// function gameOver(){
+//   for (var i=0;i<4;i++){
+//     for (var j=0;j<4;j++){
+//             if (li[i][j] == 0)
+//                 return 0
+//     }
+//   }
+//   return(checkTempAddUP() || checkTempAddDown() || checkTempAddLeft() || checkTempAddRight())
+// }
 
 function fillPosition(){
+  message = ""
   flag = [0,0,0,0]
   console.log("score: "+score)
-  if (gameOver()){
-    console.log("Game over");
-  return
-  }
+  // if (gameOver()){
+  //   console.log("Game over");
+  //   message = "Game Over!"
+  // }
+  // else{
     while (1){
       var arr = [0,1,2,3];
       var arr1 = [2,4];
@@ -233,7 +238,7 @@ function fillPosition(){
           break
       }
     }
-    return
+  return
 }
 
 function startFunction() {
