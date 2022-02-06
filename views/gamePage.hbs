@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>2048</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="logic.js"></script>
+    <script>
+      
+    </script>
+
+  </head>
+  <body>
+    <h1 style="text-align: center; font-size:60px; color:blue;">2048</h1>
+    <h3 style="text-align: center; font-size:40px; color:green;">Score: {{score}}</h3>
+    <table style="height: 300px; width: 300px; margin-left: auto; margin-right: auto;" class="table table-bordered text-center table-striped">
+      <tbody>
+        {{#each list}}
+          <tr>
+            {{#each this}}
+              {{#if this}}
+                <td style="height: 5px; width: 5px;">{{this}}</td>
+              {{else}}
+                <td style="height: 5px; width: 5px;">  </td>
+              {{/if}}
+            {{/each}}
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <form action="/up" method="post">
+      <input id=submit type="submit" name= "form" value="^" />
+    </form>
+    <br>
+    <form action="/left" method="post">
+      <input id=submit type="submit" name= "form" value="<" />
+    </form>
+    <form action="/down" method="post">
+      <input id=submit type="submit" name= "form" value="v" />
+    </form>
+    <form action="/right" method="post">
+      <input id=submit type="submit" name= "form" value=">" />
+    </form>
+    
+  </body>
+</html>

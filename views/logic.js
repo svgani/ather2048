@@ -1,0 +1,3 @@
+function left(){
+    alert("left");
+  }
