@@ -8,3 +8,5 @@
 2.  Install node modules: "npm install"
 3.  Run: "npm start" or 
     Run: "node index.js"
+
+### Flow chart
