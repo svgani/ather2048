@@ -88,5 +88,10 @@ Server is running at port 8123
 
 ```
 
+* The following output will be displayed when the game is started.
+
 <img src="design/OutputUI_Start.png" width="50%">
+
+* The following output will be displayed when the game is completed.
+
 <img src="design/OutputUI_GameOver.png" width="50%">
