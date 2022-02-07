@@ -9,4 +9,7 @@
 3.  Run: "npm start" or 
     Run: "node index.js"
 
-### Flow chart
+## Flow chart
+![Alt text](design/design-2048.transparent.png?raw=true "Flowchart")
+
+![Alt text](design/design-2048.png?raw=true "Flowchart")
