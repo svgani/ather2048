@@ -87,5 +87,7 @@ sh-3.2$ npm start
 Server is running at port 8123
 
 ```
-![Alt text](design/outputUI_Start.png?raw=true "Start")
-![Alt text](design/outputUI_GameOver.png?raw=true "GameOver")
+
+![Alt text](design/OutputUI_Start.png?raw=true "Start")
+
+![Alt text](design/OutputUI_GameOver.png?raw=true "GameOver")
