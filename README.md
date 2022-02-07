@@ -6,13 +6,11 @@
 * Prerequisite
     * Software: Python 3 and above, Node.
     * Operating System: Windows or Linux based. 
-
 ### Execution on console.
 * Please execute the following command: 
     ```
     python3 2048.py
     ```
-
 ### Execution on nodejs.
 * Please go to ui_2048 folder
 * Please install node modules:
