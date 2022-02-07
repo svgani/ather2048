@@ -1,13 +1,28 @@
 # 2048 Game
 
-## Running console based game.
-1. Run this command: "python3 2048.py"
+2048 is played on a gray 4×4 grid, with numbered tiles that slide when a player moves them using the keys 1, 2, 3 and 4 as Left, Right, Up and Down respectively.
 
-## Running UI based game.
-1.  Go to UI_2048 folder
-2.  Install node modules: "npm install"
-3.  Run: "npm start" or 
-    Run: "node index.js"
+## How to Run the Project
+* Prerequisite
+    * Software: Python 3 and above, Node.
+    * Operating System: Windows or Linux based. 
+
+### Execution on console.
+* Please execute the following command: 
+    ```
+    python3 2048.py
+    ```
+
+### Execution on nodejs.
+* Please go to ui_2048 folder
+* Please install node modules:
+    ```
+    npm install
+    ```
+* Please execute the following command
+    ```
+    npm start
+    ```
 
 ## Flow chart
 
