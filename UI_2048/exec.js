@@ -91,7 +91,7 @@ const upCheck = (req,res) => {
 const downCheck = (req,res) => {
   down()
   downAdd()
-  if (flag[0]==0)
+  if (flag[2]==0)
     res.render('gamePage',{
       list : li,
       score: score
@@ -108,7 +108,7 @@ const downCheck = (req,res) => {
 const rightCheck = (req,res) => {
   right()
   rightAdd()
-  if (flag[0]==0)
+  if (flag[3]==0)
     res.render('gamePage',{
       list : li,
       score: score
@@ -125,7 +125,7 @@ const rightCheck = (req,res) => {
 const leftCheck = (req,res) => {
   left()
   leftAdd()
-  if (flag[0]==0)
+  if (flag[1]==0)
     res.render('gamePage',{
       list : li,
       score: score
@@ -221,11 +221,6 @@ function fillPosition(){
   message = ""
   flag = [0,0,0,0]
   console.log("score: "+score)
-  // if (gameOver()){
-  //   console.log("Game over");
-  //   message = "Game Over!"
-  // }
-  // else{
     while (1){
       var arr = [0,1,2,3];
       var arr1 = [2,4];

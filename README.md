@@ -64,3 +64,28 @@ Note: The following output will be displayed when the game is completed.
 Thanks for playing
 Score: 128
 ```
+
+## Sample Output Using nodejs
+```
+sh-3.2$ cd ui_2048/
+
+sh-3.2$ npm install
+
+up to date, audited 64 packages in 1s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+sh-3.2$ npm start
+
+> ather_2048game@1.0.0 start
+
+> node index.js
+
+Server is running at port 8123
+
+```
+![Alt text](design/outputUI_Start.png?raw=true "Start")
+![Alt text](design/outputUI_GameOver.png?raw=true "GameOver")
