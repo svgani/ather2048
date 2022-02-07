@@ -88,6 +88,5 @@ Server is running at port 8123
 
 ```
 
-![Alt text](design/OutputUI_Start.png?raw=true "Start") { width=50% }
-
-![Alt text](design/OutputUI_GameOver.png?raw=true "GameOver") { width=50% }
+<img src="design/OutputUI_Start.png" width="50%">
+<img src="design/OutputUI_GameOver.png" width="50%">
