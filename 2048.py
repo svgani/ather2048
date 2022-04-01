@@ -4,6 +4,7 @@ from sys import exit
 score = 0
 flag = [0,0,0,0]
 
+# up direction addition
 def upAdd(li):
     global score
     for j in range(4):
